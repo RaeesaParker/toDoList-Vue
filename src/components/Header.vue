@@ -1,5 +1,12 @@
 <script setup>
 
+  const props = defineProps({
+    userName: String,
+    projectName: String
+  })
+
+  console.log("The saved project and name are ", props.userName, props.projectName)
+
 </script>
 
 
@@ -12,8 +19,8 @@
   <div>
       <nav class="navbar navbar-expand-lg  navbar-customise">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Raeesa's Workspace</a>
-          <a class="navbar-brand" href="#">CodeLancashire</a>
+          <a class="navbar-brand" href="#">{{props.userName}}'s Workspace</a>
+          <a class="navbar-brand" href="#">{{props.projectName}}</a>
         </div>
       </nav>
     </div>

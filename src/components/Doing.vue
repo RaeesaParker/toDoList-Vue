@@ -1,5 +1,4 @@
 <script setup>
-import { ref, reactive} from 'vue';
 import CreateNote from './subComponents/CreateNote.vue';
 
   // Define props for todo, doing, and done note lists
