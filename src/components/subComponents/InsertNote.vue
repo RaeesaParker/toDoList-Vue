@@ -11,6 +11,7 @@
   
 
  const note = {
+    noteId: 0 , 
     noteTitle: '', 
     noteContent: ''
   }
