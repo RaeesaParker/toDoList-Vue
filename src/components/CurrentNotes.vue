@@ -39,7 +39,7 @@
   </div>
 
   <div class='section-storage-container'>
-    <Doing class="section-doing" :doingNoteList=doingNoteList :doneNoteList=doneNoteList :noteList=noteList> </Doing>
+    <Doing class="section-doing" :doingNoteList=doingNoteList :doneNoteList=doneNoteList :noteList=noteList > </Doing>
     <Archive class="section-archive" :doneNoteList=doneNoteList > </Archive>
   </div>
 

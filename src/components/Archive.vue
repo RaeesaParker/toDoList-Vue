@@ -23,7 +23,9 @@ import CreateNote from './subComponents/CreateNote.vue';
     <h3>Done</h3>
 
     <CreateNote v-for="(note, index) in props.doneNoteList" :key="note.noteId" :noteItem="note" 
-      @onDelete="deleteNoteFunc" > 
+      @onDelete="deleteNoteFunc"
+      :doneToggle = true  
+      :startToggle = true > 
     </CreateNote>
   
   </div>

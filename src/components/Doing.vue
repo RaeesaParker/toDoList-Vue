@@ -6,7 +6,7 @@ import CreateNote from './subComponents/CreateNote.vue';
   const props = defineProps({
     noteList:Object,
     doingNoteList: Object,
-    doneNoteList: Object
+    doneNoteList: Object,
   })
 
   // Function to delete note from the doing list => removes note with supplied id
@@ -33,7 +33,9 @@ import CreateNote from './subComponents/CreateNote.vue';
 
   <div>
     <h3>Doing</h3>
-    <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note" 
+    <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note"
+      :doneToggle = false
+      :startToggle = true
       @onDelete="deleteNoteFunc"
       @onDoneAdd="addDoneNoteFunc"> 
     </CreateNote>

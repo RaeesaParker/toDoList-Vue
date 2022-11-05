@@ -51,7 +51,11 @@
   <CreateNote v-for="(note, index) in props.noteList" :key="note.noteId" :noteItem="note" 
     @onDelete="deleteNoteFunc" 
     @onDoingAdd="addDoingNoteFunc"
-    @onDoneAdd="addDoneNoteFunc"> 
+    @onDoneAdd="addDoneNoteFunc" 
+    :doneToggle = false 
+    :startToggle = false 
+   >
+     
   </CreateNote>
 
 </template>

@@ -1,8 +1,12 @@
 <script setup>
   // Define props for todo note list
   const props = defineProps({
-    noteItem: Object
+    noteItem: Object,
+    startToggle:Boolean,
+    doneToggle:Boolean
   })
+
+  console.log(props.startToggle)
 
   // Function to emit functions for buttons pressed
   const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete',])
@@ -27,15 +31,17 @@
 
     <div class='div-buttons'>
       <button @click="onDoingAdd"
-        class='button doing-button'
+        :class="{displayToggle: props.startToggle === true}"
+        class=' button doing-button'
         type="submit"
         > Start
       </button>
 
       <button  @click="onDoneAdd"
-          class='button archive-button'
-          type="submit"
-          > Done
+        :class="{displayToggle: props.doneToggle === true}"
+        class='button archive-button'
+        type="submit"
+        > Done
         </button>
 
       <button @click="onDelete"
@@ -81,16 +87,16 @@
 
   .delete-button{
     color: var(--yellow);
-    display: inline;
   }
   .doing-button{
   color: var(--red);
-  display: inline;
   }
 
   .archive-button{
     color: var(--black);
-    display: inline;
+  }
+  .displayToggle{
+    display: none;
   }
 
   
