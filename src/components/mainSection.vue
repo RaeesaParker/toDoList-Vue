@@ -1,7 +1,6 @@
 <script setup>
   import { ref } from 'vue';
-  import CurrentNotes from './subComponents/CurrentNotes.vue';
-  import Doing from './Doing.vue'
+  import CurrentNotes from './CurrentNotes.vue';
 
 
 </script>

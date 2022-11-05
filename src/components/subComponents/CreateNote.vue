@@ -1,32 +1,27 @@
 <script setup>
-  import { ref } from 'vue';
-
+  // Define props for todo note list
   const props = defineProps({
-    noteItem: Object
+    noteItem: Object,
+    startToggle:Boolean,
+    doneToggle:Boolean
   })
 
+  console.log(props.startToggle)
+
+  // Function to emit functions for buttons pressed
   const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete',])
 
-  function onDoingAdd(){
-    console.log("At doing move function")
-    emit('onDoingAdd', props.noteItem)
-  }
+  function onDoingAdd() { emit('onDoingAdd', props.noteItem) }
 
-  function onDoneAdd(){
-    console.log("At done move function")
-    emit('onDoneAdd', props.noteItem)
-  }
+  function onDoneAdd(){ emit('onDoneAdd', props.noteItem) }
 
-
-  function onDelete(){
-    console.log("At delete function")
-    emit('onDelete', props.noteItem.noteId)
-  }
-
-
+  function onDelete(){ emit('onDelete', props.noteItem.noteId) }
 
 </script>
 
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <template>
 
@@ -36,15 +31,17 @@
 
     <div class='div-buttons'>
       <button @click="onDoingAdd"
-        class='button doing-button'
+        :class="{displayToggle: props.startToggle === true}"
+        class=' button doing-button'
         type="submit"
         > Start
       </button>
 
       <button  @click="onDoneAdd"
-          className='button archive-button'
-          type="submit"
-          > Done
+        :class="{displayToggle: props.doneToggle === true}"
+        class='button archive-button'
+        type="submit"
+        > Done
         </button>
 
       <button @click="onDelete"
@@ -58,7 +55,9 @@
 
 </template>
 
-
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <style scoped>
   .note {
@@ -95,6 +94,9 @@
 
   .archive-button{
     color: var(--black);
+  }
+  .displayToggle{
+    display: none;
   }
 
   

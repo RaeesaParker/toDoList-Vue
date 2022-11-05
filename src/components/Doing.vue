@@ -2,11 +2,11 @@
 import { ref, reactive} from 'vue';
 import CreateNote from './subComponents/CreateNote.vue';
 
-  // Define props for Doing Note List => array of all the notes in the doing note list
+  // Define props for todo, doing, and done note lists
   const props = defineProps({
     noteList:Object,
     doingNoteList: Object,
-    doneNoteList: Object
+    doneNoteList: Object,
   })
 
   // Function to delete note from the doing list => removes note with supplied id
@@ -16,7 +16,6 @@ import CreateNote from './subComponents/CreateNote.vue';
 
   // Function to add note to the done list 
   const addDoneNoteFunc = (note) => {
-    // Add the note to the Done note list
     let positionInsert = props.doneNoteList.length + 1
     props.doneNoteList.splice( positionInsert , 0 , { noteId: props.doneNoteList.length, noteTitle: note.noteTitle, noteContent: note.noteContent } )
 
@@ -26,20 +25,28 @@ import CreateNote from './subComponents/CreateNote.vue';
 
 </script>
 
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <template>
+
   <div>
     <h3>Doing</h3>
-    <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note" 
+    <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note"
+      :doneToggle = false
+      :startToggle = true
       @onDelete="deleteNoteFunc"
-      @onDoneAdd="addDoneNoteFunc"
-      > </CreateNote>
+      @onDoneAdd="addDoneNoteFunc"> 
+    </CreateNote>
   </div>
 
 </template>
 
 
-
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <style scoped>
 
