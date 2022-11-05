@@ -33,7 +33,7 @@ import { ref } from 'vue';
     font-size: 0.75rem;
     height: 5vh;
     justify-content: center;
-    margin: 3% 0 0 -16px;
+    margin: 0 0 0 -16px;
     width: 100vw;
   }
 

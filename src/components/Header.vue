@@ -35,9 +35,10 @@
 }
 
 .navbar-brand{
+  color: var(--black);
+  cursor: default;
   font-family: var(--fontSerif);
   font-size: 2.0rem;
-  color: var(--black);
   margin-left:2rem;
 }
 
