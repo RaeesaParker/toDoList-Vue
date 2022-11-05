@@ -7,21 +7,26 @@ import mainSection from './components/mainSection.vue';
 import Footer from './components/Footer.vue';
 
   // Define Username and Project
-  let user = ref([]);
+  let user = ref(['', '', '']);
+
 
   // Set the username and project
   function setUserFunc(name){
-    user.value.splice(0 , 0 , name.userName, name.projectName)
+    user.value.splice(0 , 3 , name.userName, name.projectName, name.newUser)
+    console.log(user.value[2])
   }
 
 </script>
 
 <template>
   <div id="app-body">
-    <Home id="section-home"  @onSetUser="setUserFunc"> </Home>
-    <Header  :userName=user[0] :projectName=user[1] ></Header>
-    <mainSection></mainSection>
-    <Footer></Footer>
+    <Home :class="{displayToggleNone: user[2] === 'false'}" id="section-home"  @onSetUser="setUserFunc"> </Home>
+    <div  :class="{displayToggleBlock: user[2] === 'false'}"  class="displayToggleNone">
+      <Header :userName=user[0] :projectName=user[1] ></Header>
+      <mainSection></mainSection>
+      <Footer></Footer>
+    </div>
+
   </div>
 </template>
 
@@ -34,6 +39,14 @@ import Footer from './components/Footer.vue';
 #section-home{
   background-color: bisque;
   height: 100vh;
+}
+
+.displayToggleNone{
+  display: none;
+}
+
+.displayToggleBlock{
+  display: block;
 }
 
 </style>

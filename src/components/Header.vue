@@ -5,7 +5,6 @@
     projectName: String
   })
 
-  console.log("The saved project and name are ", props.userName, props.projectName)
 
 </script>
 

@@ -5,7 +5,8 @@ import { stringifyQuery } from 'vue-router';
   // Create object to store user settings 
   const user = {
     userName: '',
-    projectName:''
+    projectName:'',
+    newUser: 'true',
   }
 
   // Emit onAdd function
@@ -13,6 +14,8 @@ import { stringifyQuery } from 'vue-router';
 
   // Function to emit note when onSet has been pressed
   function onSet(){
+    // Set new user to false
+    user.newUser = 'false';
     emit('onSetUser', user)
   }
   
