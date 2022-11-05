@@ -1,26 +1,28 @@
 <script setup>
   import { ref } from 'vue';
   import CurrentNotes from './subComponents/CurrentNotes.vue';
+  import Doing from './Doing.vue'
 
-  // Create array to store current note list 
-  let currentNoteList = ref([]);
+  // Create an array to store the archive notes
+  let archivegNoteList = ref([]);
 
 </script>
 
 <template>
 
   <div class='section-main-container'>
-     <CurrentNotes currentNoteList= {currentNoteList} > </CurrentNotes>
+    <CurrentNotes > </CurrentNotes>
   </div>
-  
+
 </template>
 
 
 
 <style scoped>
   .section-main-container{
-  /* background-color: green; */
+  background-color: green;
   display: flex;
   min-height: 85vh;
   }
+
 </style>
