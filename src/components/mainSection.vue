@@ -17,7 +17,6 @@
 
 <style scoped>
   .section-main-container{
-  background-color: green;
   display: flex;
   min-height: 85vh;
   }

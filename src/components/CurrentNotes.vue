@@ -55,12 +55,10 @@
     width: 50%;
   }
   .section-storage-container{
-  background-color: rebeccapurple;
   min-height: 85vh;
   min-width: 50vw;
 }
 .section-archive{
-  background-color: yellow;
   border-left: 1px solid var(--black);
   min-height: 42.5vh;
 }
