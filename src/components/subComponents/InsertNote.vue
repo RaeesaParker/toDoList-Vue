@@ -2,28 +2,52 @@
   import { ref } from 'vue';
   import InsertNoteInput from './InsertNoteInput.vue';
   
- const note = ref({
+  const emit = defineEmits(['onAdd'])
+
+
+  function onAdd(){
+    emit('onAdd', note)
+  }
+  
+
+ const note = {
     noteTitle: '', 
     noteContent: ''
-  })
+  }
+
+    // Create function to add a new note to the array => Takes the input title / content and sets them
+    const  changeNoteTitle = (note, event) => {
+      note.noteTitle = event.target.value;
+    }
+
+      // Create function to add a new note to the array => Takes the input title / content and sets them
+      const  changeNoteContent = (note, event) => {
+        note.noteContent = event.target.value;
+    }
+
+
+
+
 
 </script>
 
 <template>
   <h3>Create Task</h3>
   <div class="insert-note"> 
-<form>
+<form @submit.prevent ='onAdd'>
   <InsertNoteInput
     type='text'
     name='noteTitle'
     placeholder='Task Name'
     :value = note.noteTitle
+    @change="changeNoteTitle(note,$event)"
   />
   <InsertNoteInput
     type='text'
     name='noteContent'
     placeholder='Task Details'
     :value = note.noteContent
+    @change="changeNoteContent(note,$event)"
   />
   <button
   class='submit-note-button'

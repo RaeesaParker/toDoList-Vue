@@ -2,25 +2,17 @@
   import { ref } from 'vue';
 
   const props = defineProps({
-    title:{
-      type: String, 
-    },
-    body:{
-      type: String,
-    }
+    noteItem: Object
   })
-
-
 
 
 </script>
 
 <template>
   <div class='note'>
-      <h1> {{props.title}} </h1>
-      <p> {{props.body}}  </p>
+      <h1> {{props.noteItem.noteTitle}} </h1>
+      <p> {{props.noteItem.noteContent}}  </p>
   </div>
- 
 </template>
 
 <style scoped>
