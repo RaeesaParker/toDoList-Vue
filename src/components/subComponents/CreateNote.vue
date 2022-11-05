@@ -5,11 +5,17 @@
     noteItem: Object
   })
 
-  const emit = defineEmits(['onDelete'])
+  const emit = defineEmits(['onDelete', 'onDoingAdd'])
 
   function onDelete(){
     console.log("At delete function")
+    console.log("To be deleted has id of ", props.noteItem.noteId)
     emit('onDelete', props.noteItem.noteId)
+  }
+
+  function onDoingAdd(){
+    console.log("At doing move function")
+    emit('onDoingAdd', props.noteItem)
   }
 
 </script>
@@ -18,16 +24,23 @@
 <template>
 
   <div class='note'>
-      <h1> {{props.noteItem.noteTitle}} </h1>
-      <p> {{props.noteItem.noteContent}}  </p>
+    <h1> {{props.noteItem.noteTitle}} </h1>
+    <p> {{props.noteItem.noteContent}}  </p>
 
-      <div class='div-buttons'>
-        <button @click="onDelete"
-          class='button delete-button'
-          type="submit"
-          > Delete
-        </button>
-      </div>
+    <div class='div-buttons'>
+      <button @click="onDoingAdd"
+        class='button doing-button'
+        type="submit"
+        > Start
+      </button>
+
+      <button @click="onDelete"
+        class='button delete-button'
+        type="submit"
+        > Delete
+      </button>
+    </div>
+
   </div>
 
 </template>
@@ -63,7 +76,13 @@
   .delete-button{
     color: var(--yellow);
   }
+  .doing-button{
+  color: var(--red);
+  }
 
+  .archive-button{
+    color: var(--black);
+  }
 
   
 </style>
