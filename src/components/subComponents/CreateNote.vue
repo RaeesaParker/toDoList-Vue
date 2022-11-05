@@ -88,13 +88,16 @@
 
   .delete-button{
     color: var(--yellow);
+    display: inline;
   }
   .doing-button{
   color: var(--red);
+  display: inline;
   }
 
   .archive-button{
     color: var(--black);
+    display: inline;
   }
 
   
