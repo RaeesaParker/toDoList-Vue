@@ -5,18 +5,25 @@
     noteItem: Object
   })
 
-  const emit = defineEmits(['onDelete', 'onDoingAdd'])
-
-  function onDelete(){
-    console.log("At delete function")
-    console.log("To be deleted has id of ", props.noteItem.noteId)
-    emit('onDelete', props.noteItem.noteId)
-  }
+  const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete',])
 
   function onDoingAdd(){
     console.log("At doing move function")
     emit('onDoingAdd', props.noteItem)
   }
+
+  function onDoneAdd(){
+    console.log("At done move function")
+    emit('onDoneAdd', props.noteItem)
+  }
+
+
+  function onDelete(){
+    console.log("At delete function")
+    emit('onDelete', props.noteItem.noteId)
+  }
+
+
 
 </script>
 
@@ -33,6 +40,12 @@
         type="submit"
         > Start
       </button>
+
+      <button  @click="onDoneAdd"
+          className='button archive-button'
+          type="submit"
+          > Done
+        </button>
 
       <button @click="onDelete"
         class='button delete-button'

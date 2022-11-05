@@ -3,8 +3,6 @@
   import CurrentNotes from './subComponents/CurrentNotes.vue';
   import Doing from './Doing.vue'
 
-  // Create an array to store the archive notes
-  let archivegNoteList = ref([]);
 
 </script>
 

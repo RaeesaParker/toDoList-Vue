@@ -2,23 +2,39 @@
 import { ref, reactive} from 'vue';
 import CreateNote from './subComponents/CreateNote.vue';
 
-  // Define props for Doing Note List
+  // Define props for Doing Note List => array of all the notes in the doing note list
   const props = defineProps({
-    doingNoteList: Object
+    noteList:Object,
+    doingNoteList: Object,
+    doneNoteList: Object
   })
 
-
-  // Function to delete note => Returns all the notes WITHOUT supplied ID
+  // Function to delete note from the doing list => removes note with supplied id
   const deleteNoteFunc = (id) => {
     props.doingNoteList.splice(id , 1)
+  }
+
+  // Function to add note to the done list 
+  const addDoneNoteFunc = (note) => {
+    // Add the note to the Done note list
+    let positionInsert = props.doneNoteList.length + 1
+    props.doneNoteList.splice( positionInsert , 0 , { noteId: props.doneNoteList.length, noteTitle: note.noteTitle, noteContent: note.noteContent } )
+
+    // Delete from the note from the doing noteList 
+    props.doingNoteList.splice(note.noteId , 1)
   }
 
 </script>
 
 
 <template>
-  <h3>Doing</h3>
-  <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note" @onDelete="deleteNoteFunc" > </CreateNote>
+  <div>
+    <h3>Doing</h3>
+    <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note" 
+      @onDelete="deleteNoteFunc"
+      @onDoneAdd="addDoneNoteFunc"
+      > </CreateNote>
+  </div>
 
 </template>
 
