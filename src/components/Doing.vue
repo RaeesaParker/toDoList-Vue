@@ -32,7 +32,7 @@ import CreateNote from './subComponents/CreateNote.vue';
 <template>
 
   <div>
-    <h3>Doing</h3>
+    <h2>Doing</h2>
     <CreateNote v-for="(note, index) in props.doingNoteList" :key="note.noteId" :noteItem="note"
       :doneToggle = false
       :startToggle = true

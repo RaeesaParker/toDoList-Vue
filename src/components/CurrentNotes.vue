@@ -52,23 +52,24 @@
 
 <style scoped>
   .section-insert{
-    width: 50%;
+    min-width: 60%;
   }
   .section-storage-container{
-  background-color: rebeccapurple;
-  min-height: 85vh;
-  min-width: 50vw;
-}
-.section-archive{
-  background-color: yellow;
-  border-left: 1px solid var(--black);
-  min-height: 42.5vh;
-}
-.section-doing{
-  border-left: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-  min-height: 42.5vh;
-  margin: 0;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    min-width: 40vw;
+  }
+  .section-archive{
+    border-left: 1px solid var(--yellow);
+    min-height: 45vh;
+    
+  }
+  .section-doing{
+    border-left: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+    min-height: 42.5vh;
+    margin: 0;
+  }
   
 </style>

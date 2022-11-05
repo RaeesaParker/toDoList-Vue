@@ -15,7 +15,7 @@ import { ref } from 'vue';
 
 <template>
   <div>
-    <footer class="footer mt-auto py-3 ">
+    <footer class="footer  py-3 ">
       <div class="container">
         <a v-bind:href=hrefAddress target="__blank">&copy; {{authorName}} {{currentYear}}</a>
       </div>
@@ -33,8 +33,7 @@ import { ref } from 'vue';
     font-size: 0.75rem;
     height: 5vh;
     justify-content: center;
-    margin-left: -16px;
-    position: absolute;
+    margin: 0 0 0 -16px;
     width: 100vw;
   }
 

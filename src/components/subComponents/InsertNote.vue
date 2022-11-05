@@ -7,6 +7,14 @@
   // Function to emit note when onAdd has been pressed
   function onAdd(){
     emit('onAdd', note)
+
+    // Clear the form fields => reset the note content
+    const form = document.getElementById('input-form')
+
+    form.reset()
+    note.noteTitle = ''
+    note.noteContent = ''
+
   }
   
   // Create object to store the note
@@ -34,14 +42,15 @@
 
 <template>
 
-  <h3>Create Task</h3>
+  <h2>To Do</h2>
 
   <div class="insert-note"> 
 
-    <form @submit.prevent ='onAdd'>
+    <form id="input-form" @submit.prevent ='onAdd'>
 
       <InsertNoteInput
         type='text'
+        id="noteTitleID"
         name='noteTitle'
         placeholder='Task Name'
         :value = note.noteTitle
@@ -50,6 +59,7 @@
 
       <InsertNoteInput
         type='text'
+        id="noteContentID"
         name='noteContent'
         placeholder='Task Details'
         :value = note.noteContent
@@ -77,7 +87,7 @@
 background-color: white;
 border-radius: 7px;
 box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-height: 75px;
+height: 100px;
 margin: 15px auto 15px auto;
 padding: 10px;
 width: 60%;
