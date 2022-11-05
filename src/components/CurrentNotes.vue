@@ -52,11 +52,11 @@
 
 <style scoped>
   .section-insert{
-    width: 50%;
+    min-width: 60%;
   }
   .section-storage-container{
   min-height: 85vh;
-  min-width: 50vw;
+  min-width: 40vw;
 }
 .section-archive{
   border-left: 1px solid var(--black);

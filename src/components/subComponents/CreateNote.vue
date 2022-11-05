@@ -26,8 +26,11 @@
 <template>
 
   <div class='note'>
-    <h1> {{props.noteItem.noteTitle}} </h1>
-    <p> {{props.noteItem.noteContent}}  </p>
+    <div id="note-content">
+      <h3> {{props.noteItem.noteTitle}} </h3>
+      <p> {{props.noteItem.noteContent}}  </p>
+    </div>
+
 
     <div class='div-buttons'>
       <button @click="onDoingAdd"
@@ -69,6 +72,12 @@
   padding: 10px;
   float: left;
   }
+
+  #note-content {
+    word-break: break-all;
+  }
+
+
 
   .div-buttons{
   display: flex;

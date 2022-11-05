@@ -2,15 +2,28 @@
 
 </script>
 
+
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+
+
 <template>
   <div>
       <nav class="navbar navbar-expand-lg  navbar-customise">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">To Do List</a>
+          <a class="navbar-brand" href="#">Raeesa's Workspace</a>
+          <a class="navbar-brand" href="#">CodeLancashire</a>
         </div>
       </nav>
     </div>
 </template>
+
+
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+
 
 <style scoped>
   .navbar-customise{
@@ -22,14 +35,10 @@
 }
 
 .navbar-brand{
-  font-family: 'Hubballi', cursive;
-  font-size: 2.5rem;
+  font-family: var(--fontSerif);
+  font-size: 2.0rem;
   color: var(--black);
   margin-left:2rem;
-}
-
-.navbar-brand:hover{
-  color: var(--blue);
 }
 
 </style>

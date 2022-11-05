@@ -20,7 +20,7 @@ import CreateNote from './subComponents/CreateNote.vue';
 <template>
   <div>
 
-    <h3>Done</h3>
+    <h2>Done</h2>
 
     <CreateNote v-for="(note, index) in props.doneNoteList" :key="note.noteId" :noteItem="note" 
       @onDelete="deleteNoteFunc"

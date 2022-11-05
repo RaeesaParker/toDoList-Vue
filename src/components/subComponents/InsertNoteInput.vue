@@ -21,9 +21,7 @@
 <!-- =========================================================================================== -->
 
 <template>
-  <div>
-    <input autocomplete="off" type="text" :placeholder=props.placeholder :value=props.value :name=props.name  />
-  </div>
+    <input required autocomplete="off" type="text" :placeholder=props.placeholder :value=props.value :name=props.name  />
 </template>
 
 
@@ -35,10 +33,11 @@
 <style scoped>
 
 input[type=text] {
-  display: block;
-  margin-top: 7px;
   border-style: none;
-  font-size: 0.75rem;
+  display: block;
+  font-size: 1.0rem;
+  margin-top: 5px;
+  padding: 5px 0;
   width: 100%;
 }
 
