@@ -1,32 +1,23 @@
 <script setup>
-  import { ref } from 'vue';
-
+  // Define props for todo note list
   const props = defineProps({
     noteItem: Object
   })
 
+  // Function to emit functions for buttons pressed
   const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete',])
 
-  function onDoingAdd(){
-    console.log("At doing move function")
-    emit('onDoingAdd', props.noteItem)
-  }
+  function onDoingAdd() { emit('onDoingAdd', props.noteItem) }
 
-  function onDoneAdd(){
-    console.log("At done move function")
-    emit('onDoneAdd', props.noteItem)
-  }
+  function onDoneAdd(){ emit('onDoneAdd', props.noteItem) }
 
-
-  function onDelete(){
-    console.log("At delete function")
-    emit('onDelete', props.noteItem.noteId)
-  }
-
-
+  function onDelete(){ emit('onDelete', props.noteItem.noteId) }
 
 </script>
 
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <template>
 
@@ -42,7 +33,7 @@
       </button>
 
       <button  @click="onDoneAdd"
-          className='button archive-button'
+          class='button archive-button'
           type="submit"
           > Done
         </button>
@@ -58,7 +49,9 @@
 
 </template>
 
-
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <style scoped>
   .note {

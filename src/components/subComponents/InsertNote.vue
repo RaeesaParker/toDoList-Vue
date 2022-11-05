@@ -1,65 +1,76 @@
 <script setup>
-  import { ref } from 'vue';
   import InsertNoteInput from './InsertNoteInput.vue';
-  
+
+  // Emit onAdd function
   const emit = defineEmits(['onAdd'])
 
-
+  // Function to emit note when onAdd has been pressed
   function onAdd(){
     emit('onAdd', note)
   }
   
-
- const note = {
+  // Create object to store the note
+  const note = {
     noteId: 0 , 
     noteTitle: '', 
     noteContent: ''
   }
 
-    // Create function to add a new note to the array => Takes the input title / content and sets them
-    const  changeNoteTitle = (note, event) => {
-      note.noteTitle = event.target.value;
-    }
+  // Function to set note title
+  const  changeNoteTitle = (note, event) => {
+    note.noteTitle = event.target.value;
+  }
 
-      // Create function to add a new note to the array => Takes the input title / content and sets them
-      const  changeNoteContent = (note, event) => {
-        note.noteContent = event.target.value;
-    }
-
-
-
-
+  // Function to set note content
+  const  changeNoteContent = (note, event) => {
+    note.noteContent = event.target.value;
+  }
 
 </script>
 
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+
 <template>
+
   <h3>Create Task</h3>
+
   <div class="insert-note"> 
-<form @submit.prevent ='onAdd'>
-  <InsertNoteInput
-    type='text'
-    name='noteTitle'
-    placeholder='Task Name'
-    :value = note.noteTitle
-    @change="changeNoteTitle(note,$event)"
-  />
-  <InsertNoteInput
-    type='text'
-    name='noteContent'
-    placeholder='Task Details'
-    :value = note.noteContent
-    @change="changeNoteContent(note,$event)"
-  />
-  <button
-  class='submit-note-button'
-  type='submit'
-  >
-  +
-  </button>
-</form>
-</div>
+
+    <form @submit.prevent ='onAdd'>
+
+      <InsertNoteInput
+        type='text'
+        name='noteTitle'
+        placeholder='Task Name'
+        :value = note.noteTitle
+        @change="changeNoteTitle(note,$event)"
+      />
+
+      <InsertNoteInput
+        type='text'
+        name='noteContent'
+        placeholder='Task Details'
+        :value = note.noteContent
+        @change="changeNoteContent(note,$event)"
+      />
+
+      <button
+      class='submit-note-button'
+      type='submit'
+      >
+      +
+      </button>
+
+    </form>
+  </div>
  
 </template>
+
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
+<!-- =========================================================================================== -->
 
 <style scoped>
 .insert-note {
@@ -87,6 +98,4 @@ width: 60%;
   right:-90%;
   width: 2.0rem;
  }
-
-  
 </style>
