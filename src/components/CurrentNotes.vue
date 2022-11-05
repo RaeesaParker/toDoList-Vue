@@ -53,20 +53,25 @@
 <style scoped>
   .section-insert{
     min-width: 60%;
+    background-color: red;
   }
   .section-storage-container{
-  min-height: 85vh;
-  min-width: 40vw;
-}
-.section-archive{
-  border-left: 1px solid var(--black);
-  min-height: 42.5vh;
-}
-.section-doing{
-  border-left: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-  min-height: 42.5vh;
-  margin: 0;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    min-width: 40vw;
+    background-color: green;
+  }
+  .section-archive{
+    border-left: 1px solid var(--black);
+    min-height: 45vh;
+    
+  }
+  .section-doing{
+    border-left: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    min-height: 42.5vh;
+    margin: 0;
+  }
   
 </style>
