@@ -7,11 +7,17 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <Header></Header>
-  <mainSection></mainSection>
-  <Footer></Footer>
+  <div id="app-body">
+    <Header></Header>
+    <mainSection></mainSection>
+    <Footer></Footer>
+  </div>
 </template>
 
 <style scoped>
+
+#app-body{
+  position: relative;
+}
 
 </style>

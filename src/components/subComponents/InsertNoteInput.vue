@@ -21,7 +21,7 @@
 <!-- =========================================================================================== -->
 
 <template>
-    <input required autocomplete="off" type="text" :placeholder=props.placeholder :value=props.value :name=props.name  />
+    <input  autocomplete="off" type="text" :placeholder=props.placeholder :value=props.value :name=props.name  />
 </template>
 
 
