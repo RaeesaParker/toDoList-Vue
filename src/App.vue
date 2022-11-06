@@ -13,7 +13,6 @@ import Footer from './components/Footer.vue';
   // Set the username and project
   function setUserFunc(name){
     user.value.splice(0 , 3 , name.userName, name.projectName, name.newUser)
-    console.log(user.value[2])
   }
 
 </script>

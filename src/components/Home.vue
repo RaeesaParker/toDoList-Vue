@@ -34,7 +34,7 @@ import { stringifyQuery } from 'vue-router';
         break;
       case 'blue':
         document.documentElement.style.setProperty('--primary', '#2E86AB');
-        document.documentElement.style.setProperty('--secondary', '#e1ecf7');
+        document.documentElement.style.setProperty('--secondary', '#e7ecef');
         document.documentElement.style.setProperty('--tertiary', '#f8f9fb');
         break;
       case 'yellow':
@@ -78,11 +78,11 @@ import { stringifyQuery } from 'vue-router';
       <div id="user-form">
         <form  @submit.prevent ='onSet'>
           <fieldset class="field-flex"> 
-            <input  autocomplete="off" type="text" placeholder="Name" name="name" :value=user.userName @change="changeUserName(user,$event)" /> 
+            <input  required autocomplete="off" type="text" placeholder="Name" name="name" :value=user.userName @change="changeUserName(user,$event)" /> 
           </fieldset>
 
           <fieldset class="field-flex">
-            <input  autocomplete="off" type="text" placeholder="Project Name" name="project-name" :value=user.projectName  @change="changeProjectName(user,$event)" /> 
+            <input required autocomplete="off" type="text" placeholder="Project Name" name="project-name" :value=user.projectName  @change="changeProjectName(user,$event)" /> 
           </fieldset>
 
           <fieldset  class="field-flex">
@@ -193,7 +193,7 @@ import { stringifyQuery } from 'vue-router';
     background: linear-gradient(to right, #fffbfb 33%, #f3f1ef 33%, #f3f1ef 66%, #b01307 66% );
   }
   #palette-blue{
-    background: linear-gradient(to right, #f8f9fb 33%, #e1ecf7 33%, #e1ecf7 66%, #2E86AB 66% );
+    background: linear-gradient(to right, #f8f9fb 33%, #e7ecef 33%, #e7ecef 66%, #2E86AB 66% );
   }
   #palette-yellow{
     background: linear-gradient(to right, #ffffff 33%, #f4f4f4 33%, #f4f4f4 66%, #eec302 66% );
