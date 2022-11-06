@@ -114,26 +114,26 @@
   position: relative;
   }
 
-.hovertext:before {
-  background-color: var(--black);
-  border-radius: 5px;
-  color: var(--white);
-  content: attr(data-hover);
-  left: -300%;
-  opacity: 0.5;
-  padding: 5px 0;
-  position: absolute;
-  text-align: center;
-  top: 200%;
-  visibility: hidden;
-  width: 75px;
-  z-index: 1;
-}
+  .hovertext:before {
+    background-color: var(--black);
+    border-radius: 5px;
+    color: var(--white);
+    content: attr(data-hover);
+    left: -300%;
+    opacity: 0.5;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    top: 200%;
+    visibility: hidden;
+    width: 75px;
+    z-index: 1;
+  }
 
-.hovertext:hover:before {
-  opacity: 1;
-  visibility: visible;
-}
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
 
 
 </style>

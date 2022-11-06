@@ -26,7 +26,7 @@
   <div>
       <nav class="navbar navbar-expand-lg  navbar-customise">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">{{props.userName}}'s Workspace</a>
+          <a class="navbar-brand" >{{props.userName}}'s Workspace</a>
           <a class="navbar-brand" id="project-name">{{props.projectName}}</a>
           <a class="navbar-brand" id="new-project" @click="onNewProject">New Project</a>
         </div>
@@ -54,7 +54,6 @@
   cursor: default;
   font-family: var(--fontSerif);
   font-size: 2.0rem;
-  margin-left:2rem;
 }
 
 #project-name{
@@ -68,6 +67,12 @@
 #new-project:hover{
   color: var(--secondary);
   cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+  .navbar-brand{
+  font-size: 1.5rem;
+}
 }
 
 </style>
