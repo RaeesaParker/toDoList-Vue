@@ -34,22 +34,27 @@
     <div class='div-buttons'>
       <button @click="onDoingAdd"
         :class="{displayToggle: props.startToggle === true}"
-        class=' button doing-button'
-        type="submit"
-        > Start
+        class='button'
+        id="doing-button"
+        type="submit"> 
+          <span class="hovertext" data-hover="Start Task"> <font-awesome-icon icon="fa-solid fa-play" />   </span>
       </button>
 
       <button  @click="onDoneAdd"
         :class="{displayToggle: props.doneToggle === true}"
-        class='button archive-button'
-        type="submit"
-        > Done
+        class='button'
+        id="archive-button"
+        title="Done"
+        type="submit"> 
+        <span class="hovertext" data-hover="Done"> <font-awesome-icon icon="fa-solid fa-circle-check" />   </span>
         </button>
 
       <button @click="onDelete"
-        class='button delete-button'
-        type="submit"
-        > <font-awesome-icon icon="fa-solid fa-trash" />
+        class='button'
+        id="delete-button"
+        title="Bin"
+        type="submit"> 
+        <span class="hovertext" data-hover="Trash"> <font-awesome-icon icon="fa-solid fa-trash" />   </span>
       </button>
     </div>
 
@@ -76,13 +81,10 @@
     word-break: break-all;
   }
 
-
-
   .div-buttons{
   display: flex;
   justify-content: space-between;
   }
-
   .button{
     background-color: transparent;
     border: none;
@@ -93,19 +95,45 @@
     outline: none;
   }
 
-  .delete-button{
-    color: var(--red);
+  #delete-button{
+    color: var(--black);
   }
-  .doing-button{
+
+  #doing-button{
   color: var(--primary);
   }
 
-  .archive-button{
-    color: var(--black);
+  #archive-button{
+    color: var(--red);
   }
   .displayToggle{
     display: none;
   }
 
-  
+  .hovertext {
+  position: relative;
+  }
+
+.hovertext:before {
+  background-color: var(--black);
+  border-radius: 5px;
+  color: var(--white);
+  content: attr(data-hover);
+  left: -300%;
+  opacity: 0.5;
+  padding: 5px 0;
+  position: absolute;
+  text-align: center;
+  top: 200%;
+  visibility: hidden;
+  width: 75px;
+  z-index: 1;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 </style>
