@@ -1,1 +1,3 @@
-module.exports = {    publicPath: process.env.NODE_ENV === 'production'    ? '/ toDoList-Vue/'    : '/'}
+module.exports = {
+  publicPath: '/ toDoList-Vue/'
+}
