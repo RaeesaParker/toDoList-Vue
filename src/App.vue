@@ -15,13 +15,18 @@ import Footer from './components/Footer.vue';
     user.value.splice(0 , 3 , name.userName, name.projectName, name.newUser)
   }
 
+  // Reset the homescreen if newProject Button is clicked => sets user[2] to true
+  function onNewProjectFunc(){
+    user.value.splice(2 , 1 , "true")
+  }
+
 </script>
 
 <template>
   <div id="app-body">
     <Home :class="{displayToggleNone: user[2] === 'false'}"   @onSetUser="setUserFunc"> </Home>
     <div  :class="{displayToggleBlock: user[2] === 'false'}"  class="displayToggleNone">
-      <Header :userName=user[0] :projectName=user[1] ></Header>
+      <Header :userName=user[0] :projectName=user[1] :newUser=user[2] @onNewProject="onNewProjectFunc" ></Header>
       <mainSection></mainSection>
       <Footer></Footer>
     </div>

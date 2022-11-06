@@ -2,8 +2,16 @@
 
   const props = defineProps({
     userName: String,
-    projectName: String
+    projectName: String,
+    newUser:String
   })
+
+  const emit = defineEmits([ 'onNewProject'])
+
+  // When new projet is clicked => set newUser back to true 
+  function onNewProject(){
+    emit('onNewProject')
+  }
 
 
 </script>
@@ -19,7 +27,8 @@
       <nav class="navbar navbar-expand-lg  navbar-customise">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">{{props.userName}}'s Workspace</a>
-          <a class="navbar-brand" href="#">{{props.projectName}}</a>
+          <a class="navbar-brand" id="project-name">{{props.projectName}}</a>
+          <a class="navbar-brand" id="new-project" @click="onNewProject">New Project</a>
         </div>
       </nav>
     </div>
@@ -47,4 +56,18 @@
   font-size: 2.0rem;
   margin-left:2rem;
 }
+
+#project-name{
+  color: var(--black);
+}
+
+#new-project{
+  font-size: 1.25rem;
+}
+
+#new-project:hover{
+  color: var(--black);
+  cursor: pointer;
+}
+
 </style>

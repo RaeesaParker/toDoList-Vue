@@ -11,6 +11,16 @@ import { stringifyQuery } from 'vue-router';
   // Emit onAdd function
   const emit = defineEmits(['onSetUser'])
 
+    // Function to set userName
+    const  changeUserName = (userName, event) => {
+    user.userName = event.target.value;
+  }
+
+  // Function to set project Name
+  const  changeProjectName = (projectName, event) => {
+    user.projectName = event.target.value;
+  }
+
   // Function to emit note when form has been submitted
   function onSet(){
     // Set new user to false
@@ -48,16 +58,6 @@ import { stringifyQuery } from 'vue-router';
         document.documentElement.style.setProperty('--tertiary', '#ffffff');
         break;
     }
-  }
-  
-  // Function to set userName
-  const  changeUserName = (userName, event) => {
-    user.userName = event.target.value;
-  }
-
-  // Function to set project Name
-  const  changeProjectName = (projectName, event) => {
-    user.projectName = event.target.value;
   }
 
 </script>
