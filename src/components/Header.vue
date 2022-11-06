@@ -33,7 +33,7 @@
 
 <style scoped>
   .navbar-customise{
-  background-color: var(--yellow);
+  background-color: var(--primary);
   border-radius: 1px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   height: 10vh;
@@ -41,11 +41,10 @@
 }
 
 .navbar-brand{
-  color: var(--black);
+  color: var(--secondary);
   cursor: default;
   font-family: var(--fontSerif);
   font-size: 2.0rem;
   margin-left:2rem;
 }
-
 </style>

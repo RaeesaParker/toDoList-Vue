@@ -1,10 +1,14 @@
 /* ------------- CSS VARIABLES -------------- */
 :root{
-  --yellow : #ffd700;
-  --black :  #000000; 
+
+  /* Colour palettes */
+  --primary: #2E86AB; 
+  --secondary:#F5f5f5;
+  --tertiary:#ffd700;
+  --black :  #222222; 
+  --white: #F5f5f5;
   --blue : #2E86AB; 
   --red : #F24236; 
-  --backgroundColour: #eee;
 
   --fontSerif: 'Crimson Text', serif;
   --fontSans: 'Roboto', sans-serif; 
@@ -19,12 +23,20 @@ html {
 }
 
 body {
-  background: var(--backgroundColour);
+  background: var(--secondary);
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  color: var(--black);
   font-family: var(--fontSans);
   padding: 0 16px;
   margin: 0 0 0 0;
   min-height: 100vh;
+}
+
+h1{
+  color: var(--blue);
+  font-size: 3rem;
+  font-family: var(--fontSerif);
+  text-align: center;
 }
 
 h2{

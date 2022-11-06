@@ -20,7 +20,7 @@ import Footer from './components/Footer.vue';
 
 <template>
   <div id="app-body">
-    <Home :class="{displayToggleNone: user[2] === 'false'}" id="section-home"  @onSetUser="setUserFunc"> </Home>
+    <Home :class="{displayToggleNone: user[2] === 'false'}"   @onSetUser="setUserFunc"> </Home>
     <div  :class="{displayToggleBlock: user[2] === 'false'}"  class="displayToggleNone">
       <Header :userName=user[0] :projectName=user[1] ></Header>
       <mainSection></mainSection>
@@ -36,10 +36,6 @@ import Footer from './components/Footer.vue';
   position: relative;
 }
 
-#section-home{
-  background-color: bisque;
-  height: 100vh;
-}
 
 .displayToggleNone{
   display: none;

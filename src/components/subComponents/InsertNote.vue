@@ -84,7 +84,7 @@
 
 <style scoped>
 .insert-note {
-background-color: white;
+background-color: var(--tertiary);
 border-radius: 7px;
 box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 height: 100px;
@@ -95,10 +95,10 @@ width: 60%;
 
 .submit-note-button{
   align-items: center;
-  background-color: var(--yellow);
+  background-color: var(--primary);
   border-radius: 50%;
   border-style: none;
-  color: var(--black);
+  color: var(--secondary);
   display: flex;
   font-size: 1.0rem;
   font-weight: 600;
