@@ -76,7 +76,7 @@ import { stringifyQuery } from 'vue-router';
   <div class='section-homescreen'>
     <div class="home-subsection">
       <h1>Welcome to your Workspace!</h1>
-      <h3>This is a flexible work management tool where you can ideate plans and your track progress in a visual, productive, and rewarding way. </h3>
+      <h3>This is a flexible work management tool where you can ideate plans and track your progress in a visual, productive, and rewarding way. </h3>
       <h3>Fill in the form below to begin your project:</h3>
     </div>
     
