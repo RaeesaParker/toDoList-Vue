@@ -49,7 +49,7 @@
       <button @click="onDelete"
         class='button delete-button'
         type="submit"
-        > Delete
+        > <font-awesome-icon icon="fa-solid fa-trash" />
       </button>
     </div>
 
