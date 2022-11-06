@@ -20,8 +20,9 @@
 
   //  Function to add a new note to the doing note list
   const addDoingNoteFunc = (note) => {
-    let positionInsert = props.doingNoteList.length + 1
-    props.doingNoteList.splice( positionInsert , 0 , { noteId: props.doingNoteList.length, noteTitle: note.noteTitle, noteContent: note.noteContent } )
+    
+    let positionInsert = props.doingNoteList.length + 1 ;
+    props.doingNoteList.splice( positionInsert , 0 , { noteId: note.noteId, noteTitle: note.noteTitle, noteContent: note.noteContent } )
     
     // Delete from the note from the main noteList 
     props.noteList.splice(note.noteId , 1)
@@ -34,7 +35,7 @@
   //  Function to add a new note to the done note list
   const addDoneNoteFunc = (note) => {
     let positionInsert = props.doneNoteList.length + 1
-    props.doneNoteList.splice( positionInsert , 0 , { noteId: props.doneNoteList.length, noteTitle: note.noteTitle, noteContent: note.noteContent } )
+    props.doneNoteList.splice( positionInsert , 0 , { noteId: note.noteId, noteTitle: note.noteTitle, noteContent: note.noteContent } )
     
     // Delete from the note from the main noteList 
     props.noteList.splice(note.noteId , 1)

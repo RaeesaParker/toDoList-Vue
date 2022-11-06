@@ -3,11 +3,10 @@
 
   /* Colour palettes */
   --primary: #2E86AB; 
-  --secondary:#F5f5f5;
-  --tertiary:#ffd700;
+  --secondary:#f4f4f4;
+  --tertiary:#fcfcfc;
   --black :  #222222; 
   --white: #F5f5f5;
-  --blue : #2E86AB; 
   --red : #F24236; 
 
   --fontSerif: 'Crimson Text', serif;
@@ -33,7 +32,7 @@ body {
 }
 
 h1{
-  color: var(--blue);
+  color: var(--primary);
   font-size: 3rem;
   font-family: var(--fontSerif);
   text-align: center;

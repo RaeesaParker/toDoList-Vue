@@ -13,7 +13,11 @@ import Footer from './components/Footer.vue';
   // Set the username and project
   function setUserFunc(name){
     user.value.splice(0 , 3 , name.userName, name.projectName, name.newUser)
-    console.log(user.value[2])
+  }
+
+  // Reset the homescreen if newProject Button is clicked => sets user[2] to true
+  function onNewProjectFunc(){
+    user.value.splice(2 , 1 , "true")
   }
 
 </script>
@@ -22,7 +26,7 @@ import Footer from './components/Footer.vue';
   <div id="app-body">
     <Home :class="{displayToggleNone: user[2] === 'false'}"   @onSetUser="setUserFunc"> </Home>
     <div  :class="{displayToggleBlock: user[2] === 'false'}"  class="displayToggleNone">
-      <Header :userName=user[0] :projectName=user[1] ></Header>
+      <Header :userName=user[0] :projectName=user[1] :newUser=user[2] @onNewProject="onNewProjectFunc" ></Header>
       <mainSection></mainSection>
       <Footer></Footer>
     </div>

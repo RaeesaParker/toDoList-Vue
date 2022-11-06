@@ -6,10 +6,9 @@
     doneToggle:Boolean
   })
 
-  console.log(props.startToggle)
 
   // Function to emit functions for buttons pressed
-  const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete',])
+  const emit = defineEmits([ 'onDoingAdd', 'onDoneAdd', 'onDelete'])
 
   function onDoingAdd() { emit('onDoingAdd', props.noteItem) }
 

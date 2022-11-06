@@ -20,7 +20,7 @@
 
   //  Function to add a new note => takes old noteList and adds new one to the end
   const addNoteFunc = (note) => {
-    noteList.value = [...noteList.value, { noteId: noteList.value.length, noteTitle: note.noteTitle, noteContent: note.noteContent }]
+    noteList.value = [...noteList.value, { noteId: note.noteId, noteTitle: note.noteTitle, noteContent: note.noteContent }]
   };
 
 </script>
