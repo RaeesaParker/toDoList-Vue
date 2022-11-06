@@ -26,9 +26,8 @@ import { ref } from 'vue';
 <style scoped>
   .footer {
     align-items: center;
-    background-color: var(--yellow);
+    background-color: var(--primary);
     bottom: 0;
-    color:black;
     display: flex;
     font-size: 0.75rem;
     height: 5vh;
@@ -38,7 +37,7 @@ import { ref } from 'vue';
   }
 
   .footer a {
-    color: var(--black);
+    color: var(--secondary);
     margin: 0;
     text-decoration: none;
   }

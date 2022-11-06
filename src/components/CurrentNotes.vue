@@ -57,17 +57,17 @@
   .section-storage-container{
     display: flex;
     flex-direction: column;
-    min-height: 85vh;
+    height: 85vh;
     min-width: 40vw;
   }
   .section-archive{
-    border-left: 1px solid var(--yellow);
+    border-left: 1px solid var(--primary);
     min-height: 45vh;
     
   }
   .section-doing{
-    border-left: 1px solid var(--yellow);
-    border-bottom: 1px solid var(--yellow);
+    border-left: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
     min-height: 42.5vh;
     margin: 0;
   }

@@ -33,7 +33,9 @@
 <style scoped>
 
 input[type=text] {
+  background: transparent;
   border-style: none;
+  border-bottom: 1px solid var(--primary);
   display: block;
   font-size: 1.0rem;
   margin-top: 5px;

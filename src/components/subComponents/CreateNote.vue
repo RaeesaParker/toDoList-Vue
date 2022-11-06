@@ -64,7 +64,7 @@
 
 <style scoped>
   .note {
-  background-color: white;
+  background-color: var(--tertiary);
   border-radius: 7px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   margin: 0.5rem;
@@ -95,10 +95,10 @@
   }
 
   .delete-button{
-    color: var(--yellow);
+    color: var(--red);
   }
   .doing-button{
-  color: var(--red);
+  color: var(--primary);
   }
 
   .archive-button{
