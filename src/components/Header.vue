@@ -50,7 +50,7 @@
 }
 
 .navbar-brand{
-  color: var(--secondary);
+  color: var(--black);
   cursor: default;
   font-family: var(--fontSerif);
   font-size: 2.0rem;
@@ -58,7 +58,7 @@
 }
 
 #project-name{
-  color: var(--black);
+  color: var(--secondary);
 }
 
 #new-project{
@@ -66,7 +66,7 @@
 }
 
 #new-project:hover{
-  color: var(--black);
+  color: var(--secondary);
   cursor: pointer;
 }
 

@@ -58,6 +58,12 @@ import { stringifyQuery } from 'vue-router';
         document.documentElement.style.setProperty('--tertiary', '#ffffff');
         break;
     }
+
+    // Clear the form fields => reset the user details
+    const form = document.getElementById('user-form-input')
+    form.reset()
+    user.userName ='' ;
+    user.projectName='';
   }
 
 </script>
@@ -76,7 +82,7 @@ import { stringifyQuery } from 'vue-router';
     
     <div class="home-subsection">
       <div id="user-form">
-        <form  @submit.prevent ='onSet'>
+        <form  id="user-form-input" @submit.prevent ='onSet'>
           <fieldset class="field-flex"> 
             <input  required autocomplete="off" type="text" placeholder="Name" name="name" :value=user.userName @change="changeUserName(user,$event)" /> 
           </fieldset>
@@ -207,7 +213,7 @@ import { stringifyQuery } from 'vue-router';
   }
 
   #user-form button:hover{
-    color: var(--blue);
+    color: var(--primary);
     cursor: pointer;
   }
 </style>
