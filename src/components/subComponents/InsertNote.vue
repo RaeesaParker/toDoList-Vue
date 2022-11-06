@@ -12,14 +12,15 @@
     const form = document.getElementById('input-form')
 
     form.reset()
-    note.noteTitle = ''
-    note.noteContent = ''
+    note.noteId = 0 ;
+    note.noteTitle = '' ; 
+    note.noteContent = '';
 
   }
   
   // Create object to store the note
   const note = {
-    noteId: 0 , 
+    noteId: Math.random() , 
     noteTitle: '', 
     noteContent: ''
   }

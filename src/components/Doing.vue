@@ -16,7 +16,7 @@ import CreateNote from './subComponents/CreateNote.vue';
   // Function to add note to the done list 
   const addDoneNoteFunc = (note) => {
     let positionInsert = props.doneNoteList.length + 1
-    props.doneNoteList.splice( positionInsert , 0 , { noteId: props.doneNoteList.length, noteTitle: note.noteTitle, noteContent: note.noteContent } )
+    props.doneNoteList.splice( positionInsert , 0 , { noteId: note.noteId, noteTitle: note.noteTitle, noteContent: note.noteContent } )
 
     // Delete from the note from the doing noteList 
     props.doingNoteList.splice(note.noteId , 1)
