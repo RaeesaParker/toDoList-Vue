@@ -13,7 +13,7 @@
     emit('onNewProject')
   }
 
-
+  
 </script>
 
 
